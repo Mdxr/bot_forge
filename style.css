@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: "Poppins",sans-serif;
+}
+.navbar{
+    background-color: white;
+}
+.navbar .nav-link{
+    font-size: 17px;
+    font-weight: 500;
+}
+.navbar .navbar-brand img{
+    width: 200px;
+}
+.navbar-brand span{
+    font-weight: 600;
+}
+.hero{
+    padding: 80px 0;
+}
+.hero .text h1{
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 60px;
+}
+.setup{
+    padding: 200px 0px;
+}
+.setup .text-header h3{
+    font-size: 39px;
+    font-weight: 600;
+}
+.setup .text-header p{
+    font-size: 21px;
+    font-weight: 400;
+    color: #666666;
+    padding: 10px 0;
+}
+.setup .icons{
+    padding-bottom: 20px ;
+}
+
+.setup h5{
+    font-weight: 600;
+    padding-bottom: 18px;
+}
+.setup .desc p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #666666;
+    max-width: 280px;
+    margin: 0 auto;
+}
+.setup .col-md-4{
+    margin-top: 3rem;
+    /* border: 1px solid #efefef; */
+    padding: 3rem 0;
+    box-shadow: 0 5px 15px #efefef;
+    border-radius: 25px;
+}
+
+.information .text-information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.information h5{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 48px;
+    width: 100%;
+}
+.information p{
+    font-size: 21px;
+    font-weight: 400;
+    text-align: start;
+    color: #666666;
+    padding-top: 20px;
+}
+.information .info-1, .information .info-2{
+    padding: 50px 0;
+}
+.info-1 .text-information p{
+    padding-right: 5rem;
+}
+.info-2 .text-information{
+    padding-left: 4rem;
+}
+
+.testimonials{
+    padding: 100px 0;
+}
+.testimonials .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.testimonials .container h3{
+    font-size: 39px;
+    font-weight: 600;
+}
+.testimonials .container .heading-para{
+    font-size: 21px;
+    color: #666666;
+}
+.testimonials .test-card{
+    border: 1px solid #efefef;
+    padding: 2rem 4rem;
+    margin: 0 !important;
+    border-radius: 25px;
+    box-shadow: 0 5px 25px #f1f1f1;
+}
+.test-card h6{
+    margin-top: .8rem;
+}
+.testimonials p{
+    margin: 0 !important;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #efefef;
+}
+footer .container{
+    margin: 0 1rem;
+}
+footer .col-md-4 img{
+    width: 100%;
+    max-width: 250px;
+}
+footer a{
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+}
+footer .copy{
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666666;
+}
+
+@media only screen and (max-width: 576px) {
+    .navbar{
+        padding: 20px !important;
+    }
+    .nav-link{
+        margin-left: 0;
+    }
+    .hero,
+    .setup,
+    .information{
+        text-align: center;
+    }
+    .hero{
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+    .hero .text h1{
+        font-weight: 800;
+        font-size: 38px;
+    }
+    .hero img{
+        margin-top: 2.5rem;
+    }
+    .buttons .btn{
+        display: block;
+        margin: 1rem;
+    }
+
+    .setup{
+        padding: 50px 15px;
+    }
+
+    .information .text-information{
+        padding: 2rem 1rem;
+    }
+    .information .text-information p{
+        padding: 20px 0;
+        text-align: center;
+    }
+    .information img{
+        width: 80% !important;
+    }
+    .information .info-1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+@media only screen and (max-width: 767px) {
+    footer{
+        height: auto;
+        padding: 6rem 0;
+    }
+    footer .col-md-4 img{
+        max-width: 400px;
+    }
+}
