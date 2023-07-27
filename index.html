@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Botforge - GPTs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
+    <script src="main.js" defer></script>
+</head>
   <body>
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
@@ -16,14 +17,14 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#how-to">Process</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#features">Features</a>
+                </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Models</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#design">Design</a>
               </li>
             </ul>
           </div>
@@ -37,8 +38,8 @@
                         <h1>Unleash GPT Power with <span class="text-primary">Customizable</span> Bot Designs</h1>
                     </div>
                     <div class="buttons mt-4">
-                        <a href="#" class="btn btn-primary">Get Started</a>
-                        <a href="#" class="btn btn-outline-secondary ms-3">Learn More</a>
+                        <a href="#design" class="btn btn-primary">Get Started</a>
+                        <a href="#how-to" class="btn btn-outline-secondary ms-3">Learn More</a>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
@@ -47,8 +48,8 @@
             </div>
         </div>
       </section>
-      <section class="setup">
-        <div class="container">
+      <section class="setup" >
+        <div class="container" id="how-to">
             <div class="text-header text-center">
                 <h3>Get started quickly</h3>
                 <p>Create customizable chatbots without a hassle</p>
@@ -86,7 +87,7 @@
             </div>
         </div>
       </section>
-      <section class="information">
+      <section class="information" id="features">
         <div class="container">
             <div class="row info-1">
                 <div class="col-md-6">
@@ -111,6 +112,78 @@
                     </div>
                 </div>
                 
+            </div>
+        </div>
+      </section>
+      <section class="design my-5" id="design">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-header text-center">Design your Bot</h1>
+                <form id="form" class="col-md-8 card my-5 mx-auto gap-3 py-3 px-3" novalidate>
+                    <div>
+                        <label for="p-info" class="m-1">Your Personal Information</label>
+                        <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                        
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="p-info" class="m-1">Your Chatbot Information</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Bot Name" required>
+                            <input type="text" class="form-control" placeholder="Bot Version (optional)">
+                        </div>
+                    </div>
+    
+                    <div class="input-group">
+                        <div class="form-floating">
+                            <select class="form-select" aria-label="Default select example" id="models">
+                                <option selected="selected" data-price="50" class="model price-trigger">Mozilla.ai</option>
+                                <option data-price="75" class="model price-trigger">GPT 3.5</option>
+                                <option data-price="100" class="model price-trigger">text-davinci-003</option>
+                            </select>
+                            <label for="models">Ai Model</label>
+                        </div>
+                        <div class="form-floating">
+                            <select class="form-select" aria-label="Default select example" id="parameters">
+                                <option data-price="10" selected class="parameter price-trigger" >1,000,000,000 :  (1 Billion)</option>
+                                <option data-price="30" class="parameter price-trigger" >3,000,000, :  (3 Billion)</option>
+                                <option data-price="50" class="parameter price-trigger" >7,000,000,000 :  (7 Billion)</option>
+                            </select>
+                            <label for="parameters">Data Parameters</label>
+                        </div>
+                    </div>
+                    <div class="container d-flex align-items-center justify-content-center gap-3">
+                        <h1 class="text-center" id="total-price">60$</h1>
+                        <h3 class="text-danger text-center mb-0" ><s id="discounted-price"">90$</s></h3>
+                    </div>
+                    <button class="btn btn-primary " data-bs-target="#done-modal" data-bs-toggle="modal" id="proceed" type="submit">Proceed</button>
+                </form>
+
+  <!-- Modal -->
+  <div class="modal fade" id="done-modal" tabindex="-1"  aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modal-label">Success</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center gap-0">
+            <h3 id="modal-head">
+                Payment  info sent to your Email
+            </h3>
+            <span id="modal-information">
+                Note: BotForge Just a landing page for show case pusposes and does not provide any services
+            </span>
+                
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
             </div>
         </div>
       </section>
@@ -155,33 +228,40 @@
             <div class="row">
                 <div class="col-md-4">
                     <img src="media/logo.png" alt="">
+                    <div class="copy">
+                        &copy; 2023 Botforge
+                    </div>
                 </div>
                 <div class="col-md-8">
-                    <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3">
-                        <div class="col-md-3">
+                    <div class="row g-1">
+                        <div class="row-md-3">
+                            <div>
+                                <small>
+                                    <a href="#features" class="text-decoration-none">Features</a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row-md-3">
+                            <div>
+                                <small>
+                                    <a href="#how-to" class="text-decoration-none">Process</a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row-md-3">
+                            <div>
+                                <small>
+                                    <a href="#design" class="text-decoration-none">Design</a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row-md-3">
                             <div>
                                 <small>
                                     <a href="#" class="text-decoration-none">Home</a>
                                 </small>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div>
-                                <small>
-                                    <a href="#" class="text-decoration-none">Models</a>
-                                </small>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div>
-                                <small>
-                                    <a href="#" class="text-decoration-none">Projects</a>
-                                </small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="copy">
-                        &copy; 2023 Botforge
                     </div>
                 </div>
             </div>

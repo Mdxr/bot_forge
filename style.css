@@ -128,7 +128,7 @@ footer{
     justify-content: center;
     align-items: center;
     height: 200px;
-    background-color: #efefef;
+    border-top:1px solid #ececec ;
 }
 footer .container{
     margin: 0 1rem;
@@ -140,12 +140,31 @@ footer .col-md-4 img{
 footer a{
     font-weight: 500;
     font-size: 16px;
-    color: black;
+    color: #666666;
+}
+footer a:hover{
+    color:var(--bs-nav-link-color);
 }
 footer .copy{
     margin-top: 20px;
     font-size: 16px;
+    margin-left: 1rem;
+    margin-top: -.5rem;
     color: #666666;
+}
+footer .row-md-3 {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+.hidden{
+    display: none !important;
+}
+/* Misc */
+
+.modal-body span{
+    color: #666;
 }
 
 @media only screen and (max-width: 576px) {
@@ -200,7 +219,13 @@ footer .copy{
         height: auto;
         padding: 6rem 0;
     }
+    footer .row-md-3{
+        justify-content: start;
+    }
     footer .col-md-4 img{
         max-width: 400px;
+    }
+    footer .col-md-8{
+        margin-top: 3rem;
     }
 }
